@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/views/layouts/layout.jsp">
+		<put-attribute name="sidebar" value="/WEB-INF/views/events/eventFilter.jsp"/>
+		<put-attribute name="eventList" value="/WEB-INF/views/events/list.jsp"/>
+	</definition>
+
+	<definition name="events/list" extends="baseLayout"/>
+
+	<definition name="events/edit" extends="baseLayout">
+		<put-attribute name="sidebar">
+			<definition template="/WEB-INF/views/events/form.jsp">
+				<put-attribute name="formTitle" value="Edit Event"/>
+			</definition>
+		</put-attribute>
+	</definition>
+
+</tiles-definitions>

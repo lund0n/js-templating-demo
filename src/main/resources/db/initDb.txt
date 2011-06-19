@@ -1,0 +1,7 @@
+CREATE TABLE event (
+    event_id INTEGER IDENTITY PRIMARY KEY,
+    event_name VARCHAR(100),
+    event_date DATE,
+    event_description VARCHAR(255)
+);
+ 
